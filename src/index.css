@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .nav-link {
+    @apply text-base text-gray-600 py-1 px-2;
+  }
+
+  .nav-link:hover {
+    @apply text-primary-300;
+  }
+
+  .nav-link.active {
+    @apply text-primary-300 font-medium;
+  }
+
+  .settings-sidebar a:hover {
+    @apply border-gray-300 text-gray-700;
+  }
+
+  .settings-sidebar a.active {
+    @apply sm:bg-primary-300 sm:text-white border-b-2 border-primary-300;
+  }
+
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="datetime-local"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-primary-600 border-gray-100/0;
+  }
+
+  [type="checkbox"]:checked:hover,
+  [type="checkbox"]:checked:focus,
+  [type="radio"]:checked:hover,
+  [type="radio"]:checked:focus {
+    @apply bg-primary-600 border-primary-600 ring-primary-600;
+  }
+
+  [type="checkbox"]:focus,
+  [type="radio"]:focus {
+    @apply ring-primary-600;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply text-primary-600;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+  p.errorMessage{
+    color:'red' !important;
+    }
+  .leading-\[2\.15\] {
+      line-height: 5.15 !important;
+  }
+  [type="text"]:focus {
+    line-height: 2.15 !important;
+}
+.peer:focus ~ .peer-focus\:-translate-y-\[0\.2rem\] {
+  --tw-translate-y: -0.6rem !important;
+}
+.bottom-7 {
+  bottom: 0.6rem !important;
+}
+}
+.sidemenu{
+  width:12rem !important;
+}
+
